@@ -1,0 +1,27 @@
+{
+    "bkfoodv3App": {
+        "mon_an" : {
+            "home": {
+                "title": "Mon Ans",
+                "createLabel": "Create a new Mon An",
+                "createOrEditLabel": "Create or edit a Mon An"
+            },
+            "created": "A new Mon An is created with identifier {{ param }}",
+            "updated": "A Mon An is updated with identifier {{ param }}",
+            "deleted": "A Mon An is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Mon An {{ id }}?"
+            },
+            "detail": {
+                "title": "Mon An"
+            },
+            "ten": "Ten",
+            "gia_tien": "Gia Tien",
+            "the_loai": "The Loai",
+            "date": "Date",
+            "hinh_anh": "Hinh Anh",
+            "sale": "Sale",
+            "link_comment_facebook": "Link Comment Facebook"
+        }
+    }
+}

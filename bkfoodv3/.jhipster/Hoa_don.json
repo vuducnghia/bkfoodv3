@@ -1,0 +1,45 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "user",
+            "otherEntityName": "user",
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": [
+                "required"
+            ],
+            "otherEntityField": "login",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "hoa_don"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "ten_mon_an",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sale",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "min",
+                "max"
+            ],
+            "fieldValidateRulesMin": "0",
+            "fieldValidateRulesMax": "100"
+        },
+        {
+            "fieldName": "gia_tien",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "so_luong",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20170410075656",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "hoa_don",
+    "pagination": "no"
+}

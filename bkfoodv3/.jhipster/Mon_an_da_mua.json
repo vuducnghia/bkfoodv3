@@ -1,0 +1,39 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "user",
+            "otherEntityName": "user",
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": [
+                "required"
+            ],
+            "otherEntityField": "login",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "mon_an_da_mua"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "ten_mon_an",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "so_luong",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "sale",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "gia_tien",
+            "fieldType": "Double"
+        }
+    ],
+    "changelogDate": "20170410080106",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "mon_an_da_mua",
+    "pagination": "no"
+}

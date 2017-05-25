@@ -1,0 +1,25 @@
+{
+    "bkfoodv3App": {
+        "mon_an_da_mua" : {
+            "home": {
+                "title": "Mon An Da Muas",
+                "createLabel": "Create a new Mon An Da Mua",
+                "createOrEditLabel": "Create or edit a Mon An Da Mua"
+            },
+            "created": "A new Mon An Da Mua is created with identifier {{ param }}",
+            "updated": "A Mon An Da Mua is updated with identifier {{ param }}",
+            "deleted": "A Mon An Da Mua is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Mon An Da Mua {{ id }}?"
+            },
+            "detail": {
+                "title": "Mon An Da Mua"
+            },
+            "ten_mon_an": "Ten Mon An",
+            "so_luong": "So Luong",
+            "sale": "Sale",
+            "gia_tien": "Gia Tien",
+            "user": "User"
+        }
+    }
+}

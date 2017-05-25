@@ -1,0 +1,146 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myMon_anLabel" data-translate="bkfoodv3App.mon_an.home.createOrEditLabel">Create or edit a Mon An</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.mon_an.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.mon_an.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bkfoodv3App.mon_an.ten" for="field_ten">Ten</label>
+            <input type="text" class="form-control" name="ten" id="field_ten"
+                    ng-model="vm.mon_an.ten"
+                    required/>
+            <div ng-show="editForm.ten.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.ten.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bkfoodv3App.mon_an.gia_tien" for="field_gia_tien">Gia Tien</label>
+            <input type="number" class="form-control" name="gia_tien" id="field_gia_tien"
+                    ng-model="vm.mon_an.gia_tien"
+                    required/>
+            <div ng-show="editForm.gia_tien.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.gia_tien.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.gia_tien.$error.number" data-translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bkfoodv3App.mon_an.the_loai" for="field_the_loai">The Loai</label>
+            <input type="text" class="form-control" name="the_loai" id="field_the_loai"
+                    ng-model="vm.mon_an.the_loai"
+                    required/>
+            <div ng-show="editForm.the_loai.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.the_loai.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bkfoodv3App.mon_an.date" for="field_date">Date</label>
+                <div class="input-group">
+                    <input id="field_date" type="text" class="form-control" name="date" uib-datepicker-popup="{{dateformat}}" ng-model="vm.mon_an.date" is-open="vm.datePickerOpenStatus.date"
+                    required/>
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('date')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+            <div ng-show="editForm.date.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.date.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group" ngf-drop ngf-change="vm.setHinh_anh($file, vm.mon_an)" ngf-pattern="'image/*'">
+            <label class="control-label" data-translate="bkfoodv3App.mon_an.hinh_anh" for="field_hinh_anh">Hinh Anh</label>
+            <div>
+                <img data-ng-src="{{'data:' + vm.mon_an.hinh_anhContentType + ';base64,' + vm.mon_an.hinh_anh}}" style="max-height: 100px;" ng-if="vm.mon_an.hinh_anh" alt="mon_an image"/>
+                <div ng-if="vm.mon_an.hinh_anh" class="help-block clearfix">
+                    <span class="pull-left">{{vm.mon_an.hinh_anhContentType}}, {{vm.byteSize(vm.mon_an.hinh_anh)}}</span>
+                    <button type="button" ng-click="vm.mon_an.hinh_anh=null;vm.mon_an.hinh_anhContentType=null;"
+                            class="btn btn-default btn-xs pull-right">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </div>
+                <button type="button" ngf-select class="btn btn-default btn-block"
+                        ngf-change="vm.setHinh_anh($file, vm.mon_an)" accept="image/*" data-translate="entity.action.addimage">
+                    Add image
+                </button>
+            </div>
+            <input type="hidden" class="form-control" name="hinh_anh" id="field_hinh_anh"
+                    ng-model="vm.mon_an.hinh_anh"
+                    required/>
+            <input type="hidden" class="form-control" name="hinh_anhContentType" id="field_hinh_anhContentType"
+                    ng-model="vm.mon_an.hinh_anhContentType" />
+            <div ng-show="editForm.hinh_anh.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.hinh_anh.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bkfoodv3App.mon_an.sale" for="field_sale">Sale</label>
+            <input type="number" class="form-control" name="sale" id="field_sale"
+                    ng-model="vm.mon_an.sale"
+                    required min="0" max="100"/>
+            <div ng-show="editForm.sale.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.sale.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.sale.$error.min" data-translate="entity.validation.min" translate-value-min="0">
+                    This field should be at least 0.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.sale.$error.max" data-translate="entity.validation.max" translate-value-max="100">
+                    This field cannot be more than 100.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.sale.$error.number" data-translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bkfoodv3App.mon_an.link_comment_facebook" for="field_link_comment_facebook">Link Comment Facebook</label>
+            <input type="text" class="form-control" name="link_comment_facebook" id="field_link_comment_facebook"
+                    ng-model="vm.mon_an.link_comment_facebook"
+                    required/>
+            <div ng-show="editForm.link_comment_facebook.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.link_comment_facebook.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

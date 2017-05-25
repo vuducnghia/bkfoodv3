@@ -1,0 +1,73 @@
+<div>
+    <h2 data-translate="bkfoodv3App.mon_an.home.title">Mon Ans</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="mon-an.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="bkfoodv3App.mon_an.home.createLabel">
+                        Create new Mon An
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="bkfoodv3App.mon_an.ten">Ten</span></th>
+                    <th><span data-translate="bkfoodv3App.mon_an.gia_tien">Gia Tien</span></th>
+                    <th><span data-translate="bkfoodv3App.mon_an.the_loai">The Loai</span></th>
+                    <th><span data-translate="bkfoodv3App.mon_an.date">Date</span></th>
+                    <th><span data-translate="bkfoodv3App.mon_an.hinh_anh">Hinh Anh</span></th>
+                    <th><span data-translate="bkfoodv3App.mon_an.sale">Sale</span></th>
+                    <th><span data-translate="bkfoodv3App.mon_an.link_comment_facebook">Link Comment Facebook</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="mon_an in vm.mon_ans track by mon_an.id">
+                    <td><a ui-sref="mon-an-detail({id:mon_an.id})">{{mon_an.id}}</a></td>
+                    <td>{{mon_an.ten}}</td>
+                    <td>{{mon_an.gia_tien}}</td>
+                    <td>{{mon_an.the_loai}}</td>
+                        <td>{{mon_an.date | date:'mediumDate'}}</td>
+                    <td>
+                        <a ng-if="mon_an.hinh_anh" ng-click="vm.openFile(mon_an.hinh_anhContentType, mon_an.hinh_anh)">
+                            <img data-ng-src="{{'data:' + mon_an.hinh_anhContentType + ';base64,' + mon_an.hinh_anh}}" style="max-height: 30px;" alt="mon_an image"/>
+                        </a>
+                        <span ng-if="mon_an.hinh_anh">{{mon_an.hinh_anhContentType}}, {{vm.byteSize(mon_an.hinh_anh)}}</span>
+                    </td>
+                    <td>{{mon_an.sale}}</td>
+                    <td>{{mon_an.link_comment_facebook}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="mon-an-detail({id:mon_an.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="mon-an.edit({id:mon_an.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="mon-an.delete({id:mon_an.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

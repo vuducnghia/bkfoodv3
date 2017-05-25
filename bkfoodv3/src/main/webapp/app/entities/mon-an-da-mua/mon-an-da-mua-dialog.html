@@ -1,0 +1,62 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myMon_an_da_muaLabel" data-translate="bkfoodv3App.mon_an_da_mua.home.createOrEditLabel">Create or edit a Mon An Da Mua</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.mon_an_da_mua.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.mon_an_da_mua.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bkfoodv3App.mon_an_da_mua.ten_mon_an" for="field_ten_mon_an">Ten Mon An</label>
+            <input type="text" class="form-control" name="ten_mon_an" id="field_ten_mon_an"
+                    ng-model="vm.mon_an_da_mua.ten_mon_an"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bkfoodv3App.mon_an_da_mua.so_luong" for="field_so_luong">So Luong</label>
+            <input type="number" class="form-control" name="so_luong" id="field_so_luong"
+                    ng-model="vm.mon_an_da_mua.so_luong"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bkfoodv3App.mon_an_da_mua.sale" for="field_sale">Sale</label>
+            <input type="number" class="form-control" name="sale" id="field_sale"
+                    ng-model="vm.mon_an_da_mua.sale"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="bkfoodv3App.mon_an_da_mua.gia_tien" for="field_gia_tien">Gia Tien</label>
+            <input type="number" class="form-control" name="gia_tien" id="field_gia_tien"
+                    ng-model="vm.mon_an_da_mua.gia_tien"
+                    />
+        </div>
+
+        <div class="form-group">
+            <label data-translate="bkfoodv3App.mon_an_da_mua.user" for="field_user">User</label>
+            <select class="form-control" id="field_user" name="user" ng-model="vm.mon_an_da_mua.user" ng-options="user as user.login for user in vm.users track by user.id" required>
+                <option value=""></option>
+            </select>
+        </div>
+        <div ng-show="editForm.user.$invalid">
+            <p class="help-block"
+                ng-show="editForm.user.$error.required" data-translate="entity.validation.required">
+                This field is required.
+            </p>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

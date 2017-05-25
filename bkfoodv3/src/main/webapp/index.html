@@ -1,0 +1,272 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>bkfoodv3</title>
+    <meta name="description" content="">
+    <meta name="google" value="notranslate">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css">
+    <link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/bootstrap-material-design.css">
+    <link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/ripples.css">
+    <link rel="stylesheet" href="content/css/vendor.css">
+    <link rel="stylesheet" href="content/css/main.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="content/css/footer.css">
+    <link rel="stylesheet" href="bower_components/ihover-gh-pages/src/ihover.css">
+    <link rel="stylesheet" href="bower_components/HoverEffectIdeas/css/set1.css">
+    <link rel="stylesheet" href="bower_components/HoverEffectIdeas/css/set2.css">
+    <link rel="stylesheet" href="bower_components/HoverEffectIdeas/css/normalize.css">
+    <link rel="stylesheet" href="bower_components/HoverEffectIdeas/fonts/font-awesome-4.2.0/css/font-awesome.min.css">
+
+</head>
+<body ng-app="bkfoodv3App" ng-strict-di >
+<div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.8&appId=1267325436715095";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+<!--[if lt IE 9]>
+    <!--<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>-->
+<![endif]-->
+<!--<page-ribbon></page-ribbon>-->
+    <div ui-view="navbar" ng-cloak></div>
+    <div>
+        <div class="well" ui-view="content"></div>
+        <div class="footer" ng-cloak >
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6 footerleft ">
+                            <div class="logofooter"> Logo</div>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
+                            <p><i class="fa fa-map-pin"></i> 210, Aggarwal Tower, Rohini sec 9, New Delhi -        110085, INDIA</p>
+                            <p><i class="fa fa-phone"></i> Phone (India) : +91 9999 878 398</p>
+                            <p><i class="fa fa-envelope"></i> E-mail : info@webenlance.com</p>
+                        </div>
+                        <div class="col-md-2 col-sm-6 paddingtop-bottom">
+                            <h6 class="heading7">GENERAL LINKS</h6>
+                            <ul class="footer-ul">
+                                <li><a href="#"> Career</a></li>
+                                <li><a href="#"> Privacy Policy</a></li>
+                                <li><a href="#"> Terms & Conditions</a></li>
+                                <li><a href="#"> Client Gateway</a></li>
+                                <li><a href="#"> Ranking</a></li>
+                                <li><a href="#"> Case Studies</a></li>
+                                <li><a href="#"> Frequently Ask Questions</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 col-sm-6 paddingtop-bottom">
+                            <h6 class="heading7">LATEST POST</h6>
+                            <div class="post">
+                                <p>facebook crack the movie advertisment code:what it means for you <span>August 3,2015</span></p>
+                                <p>facebook crack the movie advertisment code:what it means for you <span>August 3,2015</span></p>
+                                <p>facebook crack the movie advertisment code:what it means for you <span>August 3,2015</span></p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 paddingtop-bottom">
+                            <div class="fb-page" data-href="https://www.facebook.com/BK-food-428060167526783/" data-tabs="timeline" data-height="230" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/BK-food-428060167526783/" class="fb-xfbml-parse-ignore">
+                                <a href="https://www.facebook.com/BK-food-428060167526783/">BK food</a></blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!--footer start from here-->
+            <div class="copyright">
+                <div class="container">
+                    <div class="col-md-6">
+                        <p>© 2016 - All Rights with Webenlance</p>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="bottom_ul">
+                            <li><a href="#">webenlance.com</a></li>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Faq's</a></li>
+                            <li><a href="#">Contact us</a></li>
+                            <li><a href="#">Site Map</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/messageformat/messageformat.js"></script>
+    <script src="bower_components/json3/lib/json3.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular-cache-buster/angular-cache-buster.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-dynamic-locale/src/tmhDynamicLocale.js"></script>
+    <script src="bower_components/ngstorage/ngStorage.js"></script>
+    <script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-translate/angular-translate.js"></script>
+    <script src="bower_components/angular-translate-interpolation-messageformat/angular-translate-interpolation-messageformat.js"></script>
+    <script src="bower_components/angular-translate-loader-partial/angular-translate-loader-partial.js"></script>
+    <script src="bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/bootstrap-ui-datetime-picker/dist/datetime-picker.js"></script>
+    <script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
+    <script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
+    <script src="bower_components/bootstrap-material-design/dist/js/material.js"></script>
+    <script src="bower_components/bootstrap-material-design/dist/js/ripples.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+<!-- endinject -->
+    <!-- endbuild -->
+
+    <!-- build:js app/app.js  -->
+    <!-- inject:js -->
+    <script src="app/app.module.js"></script>
+    <script src="app/services/user/user.service.js"></script>
+    <script src="app/services/profiles/profile.service.js"></script>
+    <script src="app/services/profiles/page-ribbon.directive.js"></script>
+    <script src="app/services/auth/register.service.js"></script>
+    <script src="app/services/auth/principal.service.js"></script>
+    <script src="app/services/auth/password-reset-init.service.js"></script>
+    <script src="app/services/auth/password-reset-finish.service.js"></script>
+    <script src="app/services/auth/password.service.js"></script>
+    <script src="app/services/auth/has-authority.directive.js"></script>
+    <script src="app/services/auth/has-any-authority.directive.js"></script>
+    <script src="app/services/auth/auth.service.js"></script>
+    <script src="app/services/auth/auth.jwt.service.js"></script>
+    <script src="app/services/auth/activate.service.js"></script>
+    <script src="app/services/auth/account.service.js"></script>
+    <script src="app/layouts/navbar/navbar.controller.js"></script>
+    <script src="app/layouts/navbar/active-menu.directive.js"></script>
+    <script src="app/layouts/error/error.state.js"></script>
+    <script src="app/home/home.state.js"></script>
+    <script src="app/home/home.controller.js"></script>
+    <script src="app/entities/mon-an-da-mua/mon-an-da-mua-dialog.controller.js"></script>
+    <script src="app/entities/mon-an-da-mua/mon-an-da-mua-detail.controller.js"></script>
+    <script src="app/entities/mon-an-da-mua/mon-an-da-mua-delete-dialog.controller.js"></script>
+    <script src="app/entities/mon-an-da-mua/mon-an-da-mua.state.js"></script>
+    <script src="app/entities/mon-an-da-mua/mon-an-da-mua.service.js"></script>
+    <script src="app/entities/mon-an-da-mua/mon-an-da-mua.controller.js"></script>
+    <script src="app/entities/mon-an/mon-an-dialog.controller.js"></script>
+    <script src="app/entities/mon-an/mon-an-detail.controller.js"></script>
+    <script src="app/entities/mon-an/mon-an-delete-dialog.controller.js"></script>
+    <script src="app/entities/mon-an/mon-an.state.js"></script>
+    <script src="app/entities/mon-an/mon-an.service.js"></script>
+    <script src="app/entities/mon-an/mon-an.controller.js"></script>
+    <script src="app/entities/hoa-don/hoa-don-dialog.controller.js"></script>
+    <script src="app/entities/hoa-don/hoa-don-detail.controller.js"></script>
+    <script src="app/entities/hoa-don/hoa-don-delete-dialog.controller.js"></script>
+    <script src="app/entities/hoa-don/hoa-don.state.js"></script>
+    <script src="app/entities/hoa-don/hoa-don.service.js"></script>
+    <script src="app/entities/hoa-don/hoa-don.controller.js"></script>
+    <script src="app/entities/entity.state.js"></script>
+    <script src="app/components/util/truncate-words.filter.js"></script>
+    <script src="app/components/util/truncate-characters.filter.js"></script>
+    <script src="app/components/util/sort-by.directive.js"></script>
+    <script src="app/components/util/sort.directive.js"></script>
+    <script src="app/components/util/parse-links.service.js"></script>
+    <script src="app/components/util/pagination-util.service.js"></script>
+    <script src="app/components/util/jhi-item-count.directive.js"></script>
+    <script src="app/components/util/date-util.service.js"></script>
+    <script src="app/components/util/data-util.service.js"></script>
+    <script src="app/components/util/capitalize.filter.js"></script>
+    <script src="app/components/util/base64.service.js"></script>
+    <script src="app/components/login/login.service.js"></script>
+    <script src="app/components/login/login.controller.js"></script>
+    <script src="app/components/language/language.service.js"></script>
+    <script src="app/components/language/language.filter.js"></script>
+    <script src="app/components/language/language.controller.js"></script>
+    <script src="app/components/language/language.constants.js"></script>
+    <script src="app/components/form/show-validation.directive.js"></script>
+    <script src="app/components/form/pagination.constants.js"></script>
+    <script src="app/components/form/minbytes.directive.js"></script>
+    <script src="app/components/form/maxbytes.directive.js"></script>
+    <script src="app/components/alert/alert-error.directive.js"></script>
+    <script src="app/components/alert/alert.service.js"></script>
+    <script src="app/components/alert/alert.directive.js"></script>
+    <script src="app/blocks/interceptor/notification.interceptor.js"></script>
+    <script src="app/blocks/interceptor/errorhandler.interceptor.js"></script>
+    <script src="app/blocks/interceptor/auth-expired.interceptor.js"></script>
+    <script src="app/blocks/interceptor/auth.interceptor.js"></script>
+    <script src="app/blocks/handlers/translation.handler.js"></script>
+    <script src="app/blocks/handlers/state.handler.js"></script>
+    <script src="app/blocks/config/uib-pagination.config.js"></script>
+    <script src="app/blocks/config/uib-pager.config.js"></script>
+    <script src="app/blocks/config/translation-storage.provider.js"></script>
+    <script src="app/blocks/config/translation.config.js"></script>
+    <script src="app/blocks/config/localstorage.config.js"></script>
+    <script src="app/blocks/config/http.config.js"></script>
+    <script src="app/blocks/config/compile.config.js"></script>
+    <script src="app/blocks/config/alert.config.js"></script>
+    <script src="app/app.state.js"></script>
+    <script src="app/app.constants.js"></script>
+    <script src="app/admin/user-management/user-management-dialog.controller.js"></script>
+    <script src="app/admin/user-management/user-management-detail.controller.js"></script>
+    <script src="app/admin/user-management/user-management-delete-dialog.controller.js"></script>
+    <script src="app/admin/user-management/user-management.state.js"></script>
+    <script src="app/admin/user-management/user-management.controller.js"></script>
+    <script src="app/admin/metrics/metrics.state.js"></script>
+    <script src="app/admin/metrics/metrics.service.js"></script>
+    <script src="app/admin/metrics/metrics.modal.controller.js"></script>
+    <script src="app/admin/metrics/metrics.controller.js"></script>
+    <script src="app/admin/logs/logs.state.js"></script>
+    <script src="app/admin/logs/logs.service.js"></script>
+    <script src="app/admin/logs/logs.controller.js"></script>
+    <script src="app/admin/health/health.state.js"></script>
+    <script src="app/admin/health/health.service.js"></script>
+    <script src="app/admin/health/health.modal.controller.js"></script>
+    <script src="app/admin/health/health.controller.js"></script>
+    <script src="app/admin/docs/docs.state.js"></script>
+    <script src="app/admin/configuration/configuration.state.js"></script>
+    <script src="app/admin/configuration/configuration.service.js"></script>
+    <script src="app/admin/configuration/configuration.controller.js"></script>
+    <script src="app/admin/audits/audits.state.js"></script>
+    <script src="app/admin/audits/audits.service.js"></script>
+    <script src="app/admin/audits/audits.controller.js"></script>
+    <script src="app/admin/admin.state.js"></script>
+    <script src="app/account/social/social-register.controller.js"></script>
+    <script src="app/account/social/social-auth.controller.js"></script>
+    <script src="app/account/social/social.state.js"></script>
+    <script src="app/account/social/social.service.js"></script>
+    <script src="app/account/social/directive/social.directive.js"></script>
+    <script src="app/account/settings/settings.state.js"></script>
+    <script src="app/account/settings/settings.controller.js"></script>
+    <script src="app/account/reset/request/reset.request.state.js"></script>
+    <script src="app/account/reset/request/reset.request.controller.js"></script>
+    <script src="app/account/reset/finish/reset.finish.state.js"></script>
+    <script src="app/account/reset/finish/reset.finish.controller.js"></script>
+    <script src="app/account/register/register.state.js"></script>
+    <script src="app/account/register/register.controller.js"></script>
+    <script src="app/account/password/password-strength-bar.directive.js"></script>
+    <script src="app/account/password/password.state.js"></script>
+    <script src="app/account/password/password.controller.js"></script>
+    <script src="app/account/activate/activate.state.js"></script>
+    <script src="app/account/activate/activate.controller.js"></script>
+    <script src="app/account/account.state.js"></script>
+    <script src="app/home/gio_hang.controller.js"></script>
+    <script src="app/home/detail.controller.js"></script>
+    <script src="app/home/all.controller.js"></script>
+    <script src="app/home/search.controller.js"></script>
+    <script src="app/home/new.controller.js"></script>
+    <script src="app/home/loai_hinh.controller.js"></script>
+    <script src="app/home/hot.controller.js"></script>
+    <script src="app/entities/mon-an/mon-an.search.test.service.js"></script>
+    <script src="app/entities/hoa-don/hoa-don.searchten.service.js"></script>
+    <script src="app/entities/mon-an/mon-an.date.service.js"></script>
+    <script src="app/entities/hoa-don/hoa-don.searchByUser.service.js"></script>
+    <script src="app/home/account_curent.service.js"></script>
+    <script src="app/home/hoa-don.tinh_tien.service.js"></script>
+    <script src="app/blocks/config/bootstrap-material.config.js"></script>
+<!-- endinject -->
+    <!-- endbuild -->
+
+</body>
+</html>

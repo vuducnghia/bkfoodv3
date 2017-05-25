@@ -1,0 +1,66 @@
+<div>
+    <h2 data-translate="bkfoodv3App.mon_an_da_mua.home.title">Mon An Da Muas</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="mon-an-da-mua.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="bkfoodv3App.mon_an_da_mua.home.createLabel">
+                        Create new Mon An Da Mua
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="bkfoodv3App.mon_an_da_mua.ten_mon_an">Ten Mon An</span></th>
+                    <th><span data-translate="bkfoodv3App.mon_an_da_mua.so_luong">So Luong</span></th>
+                    <th><span data-translate="bkfoodv3App.mon_an_da_mua.sale">Sale</span></th>
+                    <th><span data-translate="bkfoodv3App.mon_an_da_mua.gia_tien">Gia Tien</span></th>
+                    <th><span data-translate="bkfoodv3App.mon_an_da_mua.user">User</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="mon_an_da_mua in vm.mon_an_da_muas track by mon_an_da_mua.id">
+                    <td><a ui-sref="mon-an-da-mua-detail({id:mon_an_da_mua.id})">{{mon_an_da_mua.id}}</a></td>
+                    <td>{{mon_an_da_mua.ten_mon_an}}</td>
+                    <td>{{mon_an_da_mua.so_luong}}</td>
+                    <td>{{mon_an_da_mua.sale}}</td>
+                    <td>{{mon_an_da_mua.gia_tien}}</td>
+                    <td>
+                        {{mon_an_da_mua.user.login}}
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="mon-an-da-mua-detail({id:mon_an_da_mua.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="mon-an-da-mua.edit({id:mon_an_da_mua.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="mon-an-da-mua.delete({id:mon_an_da_mua.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

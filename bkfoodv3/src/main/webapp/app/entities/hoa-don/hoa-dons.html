@@ -1,0 +1,66 @@
+<div>
+    <h2 data-translate="bkfoodv3App.hoa_don.home.title">Hoa Dons</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="hoa-don.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="bkfoodv3App.hoa_don.home.createLabel">
+                        Create new Hoa Don
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="bkfoodv3App.hoa_don.ten_mon_an">Ten Mon An</span></th>
+                    <th><span data-translate="bkfoodv3App.hoa_don.sale">Sale</span></th>
+                    <th><span data-translate="bkfoodv3App.hoa_don.gia_tien">Gia Tien</span></th>
+                    <th><span data-translate="bkfoodv3App.hoa_don.so_luong">So Luong</span></th>
+                    <th><span data-translate="bkfoodv3App.hoa_don.user">User</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="hoa_don in vm.hoa_dons track by hoa_don.id">
+                    <td><a ui-sref="hoa-don-detail({id:hoa_don.id})">{{hoa_don.id}}</a></td>
+                    <td>{{hoa_don.ten_mon_an}}</td>
+                    <td>{{hoa_don.sale}}</td>
+                    <td>{{hoa_don.gia_tien}}</td>
+                    <td>{{hoa_don.so_luong}}</td>
+                    <td>
+                        {{hoa_don.user.login}}
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="hoa-don-detail({id:hoa_don.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="hoa-don.edit({id:hoa_don.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="hoa-don.delete({id:hoa_don.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

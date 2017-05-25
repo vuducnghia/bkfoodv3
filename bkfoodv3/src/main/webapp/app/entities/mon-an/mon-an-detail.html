@@ -1,0 +1,52 @@
+
+<div>
+    <h2><span data-translate="bkfoodv3App.mon_an.detail.title">Mon An</span> {{vm.mon_an.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="bkfoodv3App.mon_an.ten">Ten</span></dt>
+        <dd>
+            <span>{{vm.mon_an.ten}}</span>
+        </dd>
+        <dt><span data-translate="bkfoodv3App.mon_an.gia_tien">Gia Tien</span></dt>
+        <dd>
+            <span>{{vm.mon_an.gia_tien}}</span>
+        </dd>
+        <dt><span data-translate="bkfoodv3App.mon_an.the_loai">The Loai</span></dt>
+        <dd>
+            <span>{{vm.mon_an.the_loai}}</span>
+        </dd>
+        <dt><span data-translate="bkfoodv3App.mon_an.date">Date</span></dt>
+        <dd>
+            <span>{{vm.mon_an.date | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="bkfoodv3App.mon_an.hinh_anh">Hinh Anh</span></dt>
+        <dd>
+            <div ng-if="vm.mon_an.hinh_anh">
+                <a ng-click="vm.openFile(vm.mon_an.hinh_anhContentType, vm.mon_an.hinh_anh)">
+                    <img data-ng-src="{{'data:' + vm.mon_an.hinh_anhContentType + ';base64,' + vm.mon_an.hinh_anh}}" style="max-width: 100%;" alt="mon_an image"/>
+                </a>
+                {{vm.mon_an.hinh_anhContentType}}, {{vm.byteSize(vm.mon_an.hinh_anh)}}
+            </div>
+        </dd>
+        <dt><span data-translate="bkfoodv3App.mon_an.sale">Sale</span></dt>
+        <dd>
+            <span>{{vm.mon_an.sale}}</span>
+        </dd>
+        <dt><span data-translate="bkfoodv3App.mon_an.link_comment_facebook">Link Comment Facebook</span></dt>
+        <dd>
+            <span>{{vm.mon_an.link_comment_facebook}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="mon-an-detail.edit({id:vm.mon_an.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

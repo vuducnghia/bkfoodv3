@@ -1,0 +1,19 @@
+<div class="container-fluid">
+    <div class="grid">
+        <div ng-repeat="monAn in vm.monAns " >
+            <figure class="effect-winston">
+                <img data-ng-src="{{'data:' + monAn.imageContentType + ';base64,' + monAn.hinh_anh}}"/>
+                <figcaption>
+                    <h2>{{monAn.ten}}</h2>
+                    <p>
+                        <a ui-sref="detail_mon-an ({id:monAn.id})"><i class="fa fa-fw fa-share-square-o"></i></a>
+                        <a href="#"><i class="fa fa-fw  fa-tags"></i></a>
+                        <a href="" ng-click="vm.TruyenTenMonAn(monAn.ten, monAn.gia_tien, monAn.sale)"><i class="fa fa-fw fa-check-square-o"></i></a>
+                    </p>
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+</div>
+<div>{{vm.no_data_search}}</div>
+
